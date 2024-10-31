@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlemmar</title>
+</head>
+<body>
+    <h1>Medlemmar</h1>
+</body>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.name}"></td>
+        <td>
+            <a th:href="@{/deleteMember(id=${member.id})}">Ta bort</a>
+        </td>
+    </tr>
+</tbody>
+</table>
+<a href="/addMember">Lägg till medlem</a>
+</body>
+</html>
